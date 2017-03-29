@@ -306,13 +306,9 @@ input#enter_mail {
   opacity: 0.5;
 }
 
-.sidebar .article span {
-   font-style: italic;
-   font-size: 0.8em;
-}
-
 
 .sidebar .article h3 {
+   text-transform: uppercase;
    margin-top: 7px;
 }
 
@@ -682,7 +678,7 @@ font-size: 0.9em;
   border: 2px solid #8712B2;
   padding: 0.4375em;
   margin: 0.5em auto;
-  color: #fff;
+  color: #ddd;
   background-color: #8712B2;
   font-size: 1.2em;
   text-align: center;
@@ -690,18 +686,14 @@ font-size: 0.9em;
 
 .sidebar .article a, .sidebar .article a:visited {
 	text-decoration: none;
-	color: #fff;
+	color: #ddd;
 }
 .sidebar .article:hover {
   opacity: 0.5;
 }
 
-.sidebar .article span {
-   font-style: italic;
-   font-size: 0.8em;
-}
-
 .sidebar .article h3 {
+   text-transform: uppercase;
    margin-top: 7px;
 }
 
@@ -1078,5 +1070,5 @@ form#review {
    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
    position: relative;
    padding: 20px 30px;
-   margin-top: 50px;
+   margin-top: 50px;
 }
