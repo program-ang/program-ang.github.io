@@ -1,0 +1,77 @@
+﻿.carousel  {
+   max-width: 1080px; /* the whole block width */
+   margin: 50px auto;
+   width: 100%;
+}
+.carousel-wrapper {
+   margin: 10px 30px; /* space for arrows */
+   overflow: hidden; /* main carousel area overflow hidden */
+   position: relative;
+   text-align: center;
+   padding: 20px 0;
+}
+.carousel-items {
+   width: 10000px; /* setting greater width for carousel slides set */
+   position: relative; /* positioning the block against carousel main area */
+}
+
+.carousel-block {
+   float: left; /* arranging slides in a row */
+   width: 205px; /* setting slide width */
+   padding-right: 43px; /* gaps between slides */
+}
+.carousel-block img {
+	display: block;
+}
+
+/*********** BUTTONS ***********/
+.carousel-button-left a, .carousel-button-right a {
+   width: 13px; 
+   height: 23px; 
+   position: relative;
+   top: 75px; 
+   cursor: pointer; 
+   text-decoration: none;
+}
+.carousel-button-left a {
+   float: left; 
+   background: url('/i/arrow-prev.png') no-repeat;
+   margin-left: 5px; 
+   margin-right: 30px;   
+}
+.carousel-button-right a {
+   float: right;
+   background: url('/i/arrow-next.png') no-repeat; 
+   margin-right: 5px;
+}
+
+/*********** SHADOW ***********/
+.shadow {
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 1050px) {
+  .carousel-button-left a {
+	margin-right: 0; 
+}	
+.carousel-block {
+   padding-right: 25px; /* gaps between slides */
+}
+}
+
+@media handheld and (max-width: 580px) {
+ .carousel  {
+   max-width: 580px; /* the whole block width */
+   margin: 30px auto 10px;
+   width: 100%;
+}
+ .carousel-button-left a {
+	margin-right: 0; 
+}	
+.carousel-block {
+   padding-right: 0; /* gaps between slides */
+   margin: 0 auto;
+}
+}

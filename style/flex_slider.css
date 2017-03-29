@@ -1,0 +1,177 @@
+﻿/*прописываем сброс стилей, чтобы очистить все поля, отступы и т.д., тем самым сохранив последовательность загрузки кода для всех браузеров*/
+
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  { outline: none; }
+ 
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ 
+.flexslider a img { outline: none; border: none; }
+ 
+.flexslider {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*исключаем показ слайдов изображений которые находятся вне основной области просмотра, и настраиваем стили самих слайдов (автомасштабирование и закругленная рамка).*/
+
+
+.flexslider .slides > li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+}
+ 
+.flexslider .slides img {
+    width: 100%;
+    display: block;
+}
+
+
+
+/*Добавляем стиль который «чистит» последующие положения слайдов*/
+
+
+.slides:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+html[xmlns] .slides { display: block; }
+* html .slides { height: 1%; }
+
+  
+
+/*-------------------------------------Стили для слайдера------------------------------------*/
+
+
+.flex-container {
+    min-width: 150px;
+    max-width: 1048px;
+    border: 2px solid #8712B2;
+    margin-bottom: 20px;
+}
+
+.flexslider {
+    position: relative;
+    zoom: 1;
+    padding: 0;
+    width: 88.8%;
+    margin: 0 auto;
+}
+ 
+
+@media screen and (max-width: 568px) {
+    .flexslider {
+    width: 100%;
+}
+}
+
+.flexslider .slides { zoom: 1; }
+
+
+
+/*Кнопки навигации*/
+
+.flex-control-nav, .flex-control-paging {
+    margin-bottom: 10px;
+}
+
+.flex-direction-nav a {
+    display: block;
+    position: absolute;
+    margin: -17px 0 0 0;
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    cursor: pointer;
+    text-indent: -9999px;  
+}
+
+
+
+
+/*-----------------Добавляем изображения стрелок с помощью псевдо-селекторов “:before” и “:after”.---------------------------*/
+
+
+.flex-direction-nav a:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 13px;
+    height: 23px;
+    top: 40%;
+    left: -110%;
+    background: url(../i/arrow-prev.png) no-repeat;
+    z-index: 2;
+}
+ 
+.flex-direction-nav a:after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 13px;
+    height: 23px;
+    top: 40%;
+    left: 2730%;
+    background: url(../i/arrow-next.png) no-repeat;
+    z-index: 2;
+}
+
+@media screen and (max-width: 1024px) {
+   .flex-direction-nav a:before, .flex-direction-nav a:after {
+      display: none;
+}
+}
+ 
+/*------------------------Кнопки управления  под слайдером-------------------------------*/
+
+
+.flexslider .flex-control-nav {
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+    text-align: center;
+    margin: 0 0 0 -10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .flexslider .flex-control-nav {
+     bottom: -25px;
+}
+}
+
+.flex-control-nav li {
+    display: inline-block;
+    zoom: 1;
+}
+ 
+.flex-control-paging li a {
+    display: block;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 12px;
+    height: 12px;
+    margin: 0 3px;
+    background-color: #8456C7;
+ 
+   -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;   
+}
+ 
+.flex-control-paging li a.flex-active {
+    background-color: #363636;
+}

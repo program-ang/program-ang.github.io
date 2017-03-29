@@ -1,0 +1,61 @@
+﻿.carousel  {
+   max-width: 609px; /* whole block width */
+   margin: 0px 0px 5px;
+   width: auto;
+   overflow: hidden;
+   
+}
+
+.carousel-wrapper {
+   margin: 0px; /* arrow padding */
+   overflow: hidden; /* conceal everything that overflows the main area field */
+   position: relative;
+   text-align: center;
+}
+.carousel-items {
+   width: 1000px; /* set bigger width for a set of elements */
+   position: relative; /* position the block against the main area of the carousel */
+   margin-top: 0px;
+}
+.carousel-block {
+   float: left; /* arrange all carousel elements in a row */
+   max-width: 205px; /* set the width of each element */
+   padding: 6px 20px 0px 5px; /* set padding to keep the elements apart */
+   
+}
+.carousel-block img {
+	display: block;
+        margin: 0 auto;
+}
+
+/*********** BUTTONS ***********/
+.carousel-button-left a, .carousel-button-right a {
+   width: 13px; 
+   height: 23px; 
+   position: absolute;
+   top: 50%; 
+   left: 2%;
+   cursor: pointer; 
+   text-decoration: none;
+}
+
+.carousel-button-right a {
+   right: 2%;
+}
+
+.carousel-button-left a{
+   float: left; 
+   background: url(../i/arrow-prev.png) no-repeat; 
+   margin-right: 27px;
+   margin-left: 10px;
+}
+.carousel-button-right a{
+   float: right;
+   background: url(../i/arrow-next.png) no-repeat;
+   margin-right: 10px;   
+}
+
+/*********** SHADOW ***********/
+.shadow{
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}

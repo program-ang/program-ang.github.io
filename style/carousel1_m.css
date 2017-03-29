@@ -1,0 +1,105 @@
+﻿.carousel  {
+   max-width: 830px; /* ширина всего блока */
+   margin: 30px auto;
+   width: auto;
+   overflow: hidden;
+}
+
+.carousel-wrapper {
+   margin: 0px 30px; /* отступы для стрелок */
+   overflow: hidden; /* скрываем содержимое, выходящее за рамки основной области */
+   position: relative;
+   text-align: center;
+}
+.carousel-items {
+   width: 10000px; /* устанавливаем большую ширину для набора элементов */
+   position: relative; /* позиционируем блок относительно основной области карусели */
+   margin-top: 0px;
+}
+.carousel-block {
+   float: left; /* выстраиваем все элементы карусели в ряд */
+   width: 205px; /* задаём ширину каждого элемента */
+   padding: 6px 43px 0px 0px; /* делаем оступы, чтобы элементы не сливались */
+}
+
+/*********** BUTTONS ***********/
+.carousel-button-left a, .carousel-button-right a {
+   display: inline;
+   width: 13px; 
+   height: 23px; 
+   position: relative;
+   top: 60px; 
+   cursor: pointer; 
+   text-decoration: none;
+}
+.carousel-button-left a{
+   float: left; 
+   background: url(../i/arrow-prev.png) no-repeat;
+   margin: 0 29px 0 10px;   
+}
+.carousel-button-right a{
+   float: right;
+   background: url(../i/arrow-next.png) no-repeat; 
+   margin-right: 10px;
+}
+
+/*********** SHADOW ***********/
+.shadow{
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+/*********** RESPONSIVE ***********/
+@media screen and (max-width: 832px) {
+   .carousel-block {
+     width: 190px;
+     padding: 12px 40px 0px 7px; /* делаем оступы, чтобы элементы не сливались */
+ }
+}
+@media screen and (max-width: 815px) {
+   .carousel {
+     height:8.5em;
+}
+}
+
+@media screen and (max-width: 810px) {
+   .carousel-block {
+     width: 175px;
+     padding: 12px 40px 0px 11px; /* делаем оступы, чтобы элементы не сливались */
+ }
+}
+
+@media screen and (max-width: 802px) {
+.carousel-block {
+     width: 170px;
+     padding: 12px 40px 0px 15px; /* делаем оступы, чтобы элементы не сливались */
+ }
+}
+
+@media screen and (max-width: 790px) {
+.carousel {
+     height: 7.5em;
+}
+
+.carousel-block {
+     width: 160px;
+     padding: 5px 35px 5px 5px; /* делаем оступы, чтобы элементы не сливались */
+ }
+.carousel-block img {
+     max-width: 100%;
+ }
+}
+
+@media screen and (max-width: 790px) {
+.carousel-wrapper {
+   margin: 0px;
+ }
+.carousel-button-left a, .carousel-button-right a {
+    display: none;
+ }
+}
+
+@media screen and (max-width: 600px) {
+.carousel {
+     display: none;
+}
