@@ -1071,3 +1071,15 @@ form#review {
 }
 
 }/*end of max-width: 732px */
+
+.shadow {
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-wrapper {
+   margin: 10px 30px; /* space for arrows */
+   position: relative;
+   padding: 20px 0;
+}
