@@ -7,8 +7,10 @@
 <link rel="icon" type="/image/x-icon" href="favicon.ico">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400;300" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+<link href="style/owl.carousel.min.css" rel="stylesheet">
+<link href="style/owl.theme.default.min.css" rel="stylesheet">
 <link href="style/style_all.css" rel="stylesheet">
-<link href="style/carousel1.css" rel="stylesheet">
+<!--<link href="style/carousel1.css" rel="stylesheet">-->
 <link href="style/flex_slider.css" rel="stylesheet">
 </head>
 <body>
@@ -52,18 +54,17 @@
 <div class="flex-container">
 <div class="flexslider">
 <ul class="slides">
-<li><a href="#"><img src="img/slide1.jpg" alt="banner one" /></a></li>       
-<li><img src="img/slide2.jpg" alt="banner two" /></li>     
-<li><img src="img/slide3.jpg" alt="banner three" /></li>             
-<li><img src="img/slide4.jpg" alt="banner four" /></li>    
+<li><a href="#"><img src="img/slide1.jpg" alt="" /></a></li>       
+<li><img src="img/slide2.jpg" alt="" /></li>     
+<li><img src="img/slide3.jpg" alt="" /></li>             
+<li><img src="img/slide4.jpg" alt="" /></li>    
 </ul>
 </div>
 </div>
 <div class="carousel shadow"> 
 <div class="carousel-button-left"><a href="#"></a></div> 
 <div class="carousel-button-right"><a href="#"></a></div> 
-<div class="carousel-wrapper"> 
-<div class="carousel-items"> 
+<div class="owl-carousel"> 
 <div class="carousel-block"><img src="img/sl1.jpg" alt="" /></div>
 <div class="carousel-block"><img src="img/sl2.jpg" alt="" /></div>
 <div class="carousel-block"><img src="img/sl3.jpg" alt="" /></div>
@@ -72,7 +73,6 @@
 <div class="carousel-block"><img src="img/sl6.jpg" alt="" /></div>
 <div class="carousel-block"><img src="img/sl7.jpg" alt="" /></div>            
 <div class="carousel-block"><img src="img/sl8.jpg" alt="" /></div>
-</div>
 </div>
 </div>
 <div class="content">
@@ -108,7 +108,8 @@
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/script.js"></script>
-<script src="js/carousel1.js"></script>
+<!--<script src="js/carousel1.js"></script>-->
+<script src="owlcarousel/owl.carousel.min.js"></script>
 <script src="js/jquery.flexslider-min.js"></script>
 <script type="text/javascript">// <![CDATA[
   $(document).ready(function () {
@@ -116,6 +117,28 @@
     animation: 'fade',
     controlsContainer: '.flexslider'
      });
+	 function(){
+  $(".owl-carousel").owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+      0:{
+        items:2,
+        nav:true
+        },
+      600:{
+         items:3,
+        nav:false
+        },
+      1000:{
+        items:4,
+        nav:true,
+         loop:false
+        }
+    }
+	});
+     }
     });
 // ]]></script>
 </body>
