@@ -281,8 +281,9 @@ input#enter_mail {
 	background-color: #FF530D;	
 }
 
-.sidebar h2 {
+.-menu  {
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .sidebar .article {
@@ -588,7 +589,6 @@ font-size: 0.9em;
   color: #8712B2;
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 10px;
   margin: 0;
 }
 
@@ -621,18 +621,12 @@ font-size: 0.9em;
 
 .main p {
   text-align: justify;
-  font-size: 0.9em;
 }
 
 .news_item {
 	border-radius: 10px;
 	padding: 10px;
-	margin-bottom: 10px;
-	background: #FF760D;
-	background: -webkit-linear-gradient(to top right, #fff, #FF760D);
-	background: -o-linear-gradient(to top right, #fff, #FF760D);
-	background: -moz-linear-gradient(to top right, #fff, #FF760D);
-	background: linear-gradient(to top right, #fff, #FF760D);	
+	margin-bottom: 10px;	
 }
 
 .news_item a {
@@ -668,12 +662,12 @@ font-size: 0.9em;
 
 .sidebar h2 {
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .sidebar .article {
   position: relative;
   max-width: 90%;
-  height: 4em;
   border-radius: 5px;
   border: 2px solid #8712B2;
   padding: 0.4375em;
@@ -907,7 +901,6 @@ li.active {
 }
 
 .dropdown-menu > li {
-  font-size: 0.9em;
   padding: 2px 0;
   border-bottom: none;
   text-align: center;
@@ -1072,4 +1065,29 @@ form#review {
    padding: 20px 30px;
    margin-top: 50px;
    margin-bottom: 50px;
+}
+
+.owl-prev, .owl-next {
+  position:absolute;
+  top:50%;
+  padding:5px;
+  margin:0;
+  z-index:100;
+  font-size:3rem;
+  cursor:pointer;
+  color:#555; 
+}
+
+.owl-prev {
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  left: 10px;
+}
+
+.owl-next {
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  right: 10px;
 }
