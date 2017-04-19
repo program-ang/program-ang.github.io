@@ -93,7 +93,6 @@ input[type="submit"]:hover {
 	background-color: white;
     color: #FF530D;
     border: 2px solid #4CAF50;
-	width: 30%;
 }
 
 
@@ -710,6 +709,10 @@ font-size: 0.9em;
 .sidebar .article h3 {
    text-transform: uppercase;
    margin-top: 7px;
+}
+
+input[type="submit"] {
+	width: 30%;
 }
 
 form#review {
