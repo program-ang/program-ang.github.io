@@ -306,19 +306,6 @@ div#map {
 	border: 2px solid #3F0B70;
 }
 
-.content div#address {
-	background: url('/i/address.png') no-repeat 0;
-	display: block;
-}
-
-.content div#phone {
-	background: url('/i/phone.png') no-repeat 0;
-	display: block;
-}
-
-div#address h2, div#address p, div#phone h2, div#phone p {
-  margin-left: 70px;
-}
 
 .sidebar {
   max-width: 25%;
