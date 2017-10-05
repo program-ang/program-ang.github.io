@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css" />
     <link href="/style/style_all.css" rel="stylesheet" />    
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/js/script.js"></script>    
+    <script src="/js/script.js"></script>   
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>  
   </head>
   <body>
     <div class="wrapper">
@@ -74,6 +75,7 @@
 <div class="article"><a href="/news/1/"><h3>Ash gets closer to destroying the Necronomicon.</h3>
 <span>Reviewed on Saturday December 26th by Tony Skye</span></a></div>
 </div>
+<div id="user-city"></div>
 </div>
 
     
@@ -92,5 +94,33 @@
         </div> <!--div for class="footer"-->
 
      </div> <!--div for class="wrapper"-->
+     <script>
+  $(document).ready(function() {
+     ymaps.ready(function () {  
+      ymaps.geolocation.get({
+    // Выставляем опцию для определения положения по ip
+    provider: 'yandex',
+    // Автоматически геокодируем полученный результат.
+    autoReverseGeocode: true
+}).then(function (result) {
+    // Выведем в консоль данные, полученные в результате геокодирования объекта.
+    $('#user-city').text('hey there!');
+    $('#user-city').text(result.geoObjects.get(0).properties.get('metaDataProperty').getAll());
+});
+ymaps.geolocation.get().then(function (res) {
+        // Предполагается, что на странице подключен jQuery
+    var $container = $('#user-city'),
+        bounds = res.geoObjects.get(0).properties.get('boundedBy'),
+        mapState = ymaps.util.bounds.getCenterAndZoom(
+            bounds,
+            [$container.width(), $container.height()]
+        ),
+        map = new ymaps.Map('YMapsID', mapState);
+}, function (e) {
+    console.log(e);
+});
+    });
+     });
+</script>
   </body>
 </html>
