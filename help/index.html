@@ -99,14 +99,9 @@
      ymaps.geolocation.get().then(function (res) {
         // Предполагается, что на странице подключен jQuery
     var $container = $('#user-city'),
-        bounds = res.geoObjects.get(0).properties.get('boundedBy'),
-        mapState = ymaps.util.bounds.getCenterAndZoom(
-            bounds,
-            [$container.width(), $container.height()]
-        ),
-        map = new ymaps.Map('YMapsID', mapState);
+        bounds = res.geoObjects.get(0).properties.get('boundedBy'),       
 }, function (e) {
-    console.log(e);
+    $('#user-city').text(e);
 });
 
     });
