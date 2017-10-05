@@ -96,17 +96,7 @@
      <script>
   $(document).ready(function() {
      ymaps.ready(function () {  
-      ymaps.geolocation.get({
-    // Выставляем опцию для определения положения по ip
-    provider: 'yandex',
-    // Автоматически геокодируем полученный результат.
-    autoReverseGeocode: true
-}).then(function (result) {
-    // Выведем в консоль данные, полученные в результате геокодирования объекта.
-    $('#user-city').text('hey there!');
-    $('#user-city').text(result.geoObjects.get(0).properties.get('metaDataProperty').getAll());
-});
-ymaps.geolocation.get().then(function (res) {
+     ymaps.geolocation.get().then(function (res) {
         // Предполагается, что на странице подключен jQuery
     var $container = $('#user-city'),
         bounds = res.geoObjects.get(0).properties.get('boundedBy'),
@@ -118,6 +108,7 @@ ymaps.geolocation.get().then(function (res) {
 }, function (e) {
     console.log(e);
 });
+
     });
      });
 </script>
