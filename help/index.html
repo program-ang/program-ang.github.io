@@ -99,11 +99,10 @@
      ymaps.geolocation.get().then(function (res) {
         // Предполагается, что на странице подключен jQuery
     var $container = $('#user-city'),
-        bounds = res.geoObjects.get(0).properties.get('boundedBy'),       
-}, function (e) {
+        bounds = res.geoObjects.get(0).properties.get('boundedBy'), }      
+, function (e) {
     $('#user-city').text(e);
-});
-
+};
     });
      });
 </script>
